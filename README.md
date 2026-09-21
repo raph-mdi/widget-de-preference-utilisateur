@@ -1,1 +1,1 @@
-# exercice-de-cookie
+# widget de preference utilisateur
