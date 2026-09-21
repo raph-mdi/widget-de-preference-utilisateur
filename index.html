@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Widget de préférences utilisateur</title>
+</head>
+<body>
+    <header class="header">
+        <p class="eyebrow">Exercice JavaScript</p>
+        <h1>Mes préférences</h1>
+        <p>Une interface simple pour gérer les préférences de l'utilisateur.</p>
+    </header>
+
+    <main class="container">
+        <section class="card" aria-labelledby="theme-title">
+            <p class="label">Préférence d'affichage</p>
+            <h2 id="theme-title">Thème de la page</h2>
+            <p>Choisissez l'apparence de la page.</p>
+            <button class="button button-primary" type="button" id="switch-boutton">Passer au thème sombre</button>
+        </section>
+
+        <section class="card" aria-labelledby="visits-title">
+            <p class="label">Lecture et modification</p>
+            <h2 id="visits-title">Compteur de visites</h2>
+            <p>Nombre de visites :</p>
+            <strong class="visits-count" id="nb-visits">0</strong>
+        </section>
+
+        <section class="card" aria-labelledby="reset-title">
+            <p class="label">Gestion des préférences</p>
+            <h2 id="reset-title">Réinitialisation</h2>
+            <p>Supprime les préférences enregistrées.</p>
+            <button class="button button-secondary" type="button">Réinitialiser mes préférences</button>
+        </section>
+    </main>
+
+    <aside class="consent-banner" aria-labelledby="consent-title" style="display: none;" id="banniere">
+        <div>
+            <p class="label">Votre choix</p>
+            <h2 id="consent-title">Autoriser les préférences ?</h2>
+            <p>Ce site utilise des cookies pour mémoriser vos préférences.</p>
+        </div>
+        <div class="consent-actions">
+            <button class="button button-primary" type="button" id="accepter">Accepter</button>
+            <button class="button button-secondary" type="button" id="refuser">Refuser</button>
+        </div>
+    </aside>
+
+    <section class="debug" aria-labelledby="debug-title">
+        <p class="label">Observation</p>
+        <h2 id="debug-title">Contenu de document.cookie</h2>
+        <pre>Aucun cookie lu pour le moment.</pre>
+    </section>
+
+    <footer class="footer">
+        <p>Mini-projet cookies JavaScript</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
