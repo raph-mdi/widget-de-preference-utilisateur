@@ -64,12 +64,26 @@ function changement() {
 }
 // partie 2 
 
-let i = 0 
+let i = Number(getCookie("visits")) || 0
 
 window.addEventListener("load", incrementation)
 
 function incrementation(){
   i += 1
-  document.cookie = `visits = ${i}`
+  document.cookie = `visits=${i}; max-age=31536000; path=/`
   visites.textContent = `${i}`
 }
+// partie 3 
+
+const consentReset = "consent=; max-age=0"
+const themeReset = "theme=; max-age=0"
+const visitsReset = "visits=; max-age=0"
+
+reset.addEventListener("click", reinitialisation)
+
+function reinitialisation(){
+  document.cookie = consentReset
+  document.cookie = themeReset
+  document.cookie = visitsReset
+}
+// partie 4 
